@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     theme: false,
+    value: '',
 }
 
 export const Active = createSlice({
@@ -12,8 +13,11 @@ export const Active = createSlice({
             state.theme = true
         },
         light: (state) => {
-            state.theme = true
+            state.theme = false
         },
+        data: (state) =>{
+
+        }
     },
 })
 

@@ -1,12 +1,11 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { light } from './Active'
 import { dark } from './Active'
 import Popup from './Popup'
 
 function Deneme() {
 
-    const ekrandaGoster = useSelector((tema)=>tema.deneme.theme)
+    const ekrandaGoster = useSelector((tema)=>tema.open.theme)
     console.log(ekrandaGoster)
 
     const dispatch = useDispatch()
@@ -14,8 +13,7 @@ function Deneme() {
   return (
     <div>
         {ekrandaGoster && <Popup/>}
-      <button onClick={()=>dispatch(dark())} >Dark</button>
-      <button onClick={()=>dispatch(light())} >Light</button>
+      <button onClick={()=>dispatch(dark())} >Open</button>
     </div>
   )
 }
