@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useState } from "react";
 
 const initialState = {
     theme: false,
@@ -8,17 +7,16 @@ const initialState = {
 export const Active = createSlice({
     name: 'active',
     initialState,
-    reducers:{
-        dark: (state)=>{
-            state.theme = false
-            alert('Çalıştı')
+    reducers: {
+        dark: (state) => {
+            state.theme = true
         },
-        light: (state)=>{
+        light: (state) => {
             state.theme = true
         },
     },
 })
 
-export const {dark, light} =  Active.actions
+export const { dark, light } = Active.actions
 
 export default Active.reducer
