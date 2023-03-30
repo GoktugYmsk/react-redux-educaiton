@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     theme: false,
-    value: '',
+    setWrite: '',
 }
 
 export const Active = createSlice({
@@ -16,7 +16,7 @@ export const Active = createSlice({
             state.theme = false
         },
         data: (state) =>{
-
+            state.setWrite= ''
         }
     },
 })

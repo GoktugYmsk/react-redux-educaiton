@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCountry } from './country/countrySlice';
 import Deneme from './Deneme';
 
+
 function App() {
   const dispatch = useDispatch()
   const country = useSelector(state => state.country.country)

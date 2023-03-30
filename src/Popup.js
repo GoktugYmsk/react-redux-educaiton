@@ -15,7 +15,7 @@ function Popup() {
         <div className='popup' >
             Bu sayfa Popup Sayfasıdır
             <button onClick={() => dispatch(light())} >Close</button>
-            <input placeholder='Bir mesaj yazınız' onChange={e => handleChange(e)} ></input>
+            <input placeholder='Bir mesaj yazınız' onChange={e => handleChange(e)} />
             {write}
         </div>
     )
