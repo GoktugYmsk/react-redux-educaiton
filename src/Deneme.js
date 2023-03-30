@@ -12,7 +12,7 @@ function Deneme() {
   return (
     <div>
         {ekrandaGoster && <Popup/>}
-      <button onClick={()=>dispatch(open())} >Open</button>
+      <button   onClick={()=>dispatch(open())} >Open</button>
     </div>
   )
 }
