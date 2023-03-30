@@ -1,26 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    theme: false,
-    setWrite: '',
+    active: false,
+    inActive: false,
+    deneme: '',
 }
 
 export const Active = createSlice({
     name: 'active',
     initialState,
     reducers: {
-        dark: (state) => {
-            state.theme = true
+        close: (state) => {
+            state.active = false
         },
-        light: (state) => {
-            state.theme = false
+        open: (state) => {
+            state.active = true
         },
-        data: (state) =>{
-            state.setWrite= ''
-        }
+        newPopup: (state) => {
+            state.inActive = true
+        },
+        newPopupClose: (state) =>{
+            state.inActive = false
+        },
     },
 })
 
-export const { dark, light } = Active.actions
+export const { close, open,newPopup,newPopupClose } = Active.actions
 
 export default Active.reducer

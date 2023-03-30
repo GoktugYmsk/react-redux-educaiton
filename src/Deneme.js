@@ -1,19 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { dark } from './Active'
+import { open } from './Active'
 import Popup from './Popup'
 
 function Deneme() {
 
-    const ekrandaGoster = useSelector((tema)=>tema.open.theme)
-    console.log(ekrandaGoster)
+    const ekrandaGoster = useSelector((tema)=>tema.getir.active)
 
     const dispatch = useDispatch()
 
   return (
     <div>
         {ekrandaGoster && <Popup/>}
-      <button onClick={()=>dispatch(dark())} >Open</button>
+      <button onClick={()=>dispatch(open())} >Open</button>
     </div>
   )
 }

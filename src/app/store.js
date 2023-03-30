@@ -8,7 +8,7 @@ export const store = configureStore({
     reducer: {
         counter: counterReducer,
         country: countryReducer,
-        open: Active,
-        close: Active,
+        getir: Active,
+        inPopup: Active,
     },
 })
