@@ -10,5 +10,6 @@ export const store = configureStore({
         country: countryReducer,
         getir: Active,
         inPopup: Active,
+        textTry: Active,
     },
 })
